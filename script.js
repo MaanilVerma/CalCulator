@@ -42,7 +42,13 @@ for (var i = 0; i < buttons.length; i++) {
       var result = eval(operand1 + " " + operator + " " + operand2);
       if (operator === "/" && operand2 === 0) {
         display.innerText = "error!";
-      } else {
+      } 
+
+      else if(operator === "-" && operand1 === operand2){
+          display.innerText = "0";
+      }
+      
+      else {
         if (result) {
           display.textContent = result;
           operand1 = result;
